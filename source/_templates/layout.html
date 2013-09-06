@@ -1,0 +1,17 @@
+{% extends "!layout.html" %}
+
+{%- block linktags %}
+<link rel="stylesheet" href="{{ pathto('_static/fri.css', 1) }}" type="text/css" />
+{{ super() }}
+{%- endblock %}
+
+{%- block haikurel1 %}
+<a href="{{ pathto('index') }}">{{ _('Home') }}</a>
+&#160;&#160;::&#160;&#160;
+<a href="{{ pathto('download') }}">{{ _('Download') }}</a>
+&#160;&#160;::&#160;&#160;
+<a href="{{ pathto('docs') }}">{{ _('Documentation') }}</a>
+&#160;&#160;::&#160;&#160;
+{{ super() }}
+{%- endblock %}
+

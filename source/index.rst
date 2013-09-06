@@ -33,27 +33,6 @@ Features
 - Sprites with animations, movement, collision detection, callbacks, transforms
 - Sprite layers (grouping) with optional background image or gradient
 - Extensible resource manager
-- Sound support
+- Sound support using HTML5 Audio where available, with optional fallback to Flash
 - Optional keyboard and mouse state polling
-
-
-
-Welcome to friGame's documentation!
-===================================
-
-Contents:
-
-.. toctree::
-    :maxdepth: 2
-
-    intro
-    api_reference/index
-
-
-Indices and tables
-==================
-
-- :ref:`genindex`
-- :ref:`modindex`
-- :ref:`search`
 
