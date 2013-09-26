@@ -16,6 +16,17 @@ friGame Copyright (c) 2011-2012 Franco Bugnano, licensed under the MIT
 
 
 
+What it can do
+==============
+
+.. raw:: html
+
+    <div id="playground" style="position: relative; width: 320px; height: 480px; margin-left: auto; margin-right: auto"></div>
+    <script src="_static/deps.js"></script>
+    <script src="_static/arkanoid.js"></script>
+
+
+
 Goals and Features
 ==================
 
