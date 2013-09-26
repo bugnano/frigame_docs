@@ -276,6 +276,7 @@ Generic Callback Functions
     The **callback** function will be called with the following parameters:
 
         - :this: The sprite object
+        - :node: The sprite object
 
     It will be called as long as its return value is |falsy|.
 
@@ -337,7 +338,7 @@ Visibility Functions
 Drawing Order Functions
 -----------------------
 
-.. function:: sprite.moveFirst()
+.. function:: sprite.drawFirst()
 
     This function makes the sprite the first one to be drawn inside its sprite group.
 
@@ -345,9 +346,9 @@ Drawing Order Functions
 
     **Example**::
 
-        friGame.sprites.player.moveFirst();
+        friGame.sprites.player.drawFirst();
 
-.. function:: sprite.moveLast()
+.. function:: sprite.drawLast()
 
     This function makes the sprite the last one to be drawn inside its sprite group.
 
@@ -355,9 +356,9 @@ Drawing Order Functions
 
     **Example**::
 
-        friGame.sprites.player.moveLast();
+        friGame.sprites.player.drawLast();
 
-.. function:: sprite.moveTo(index)
+.. function:: sprite.drawTo(index)
 
     This function moves the sprite to the drawing position given by the index parameter.
 
@@ -367,11 +368,11 @@ Drawing Order Functions
 
     **Example**::
 
-        friGame.sprites.player.moveTo(3);
+        friGame.sprites.player.drawTo(3);
 
     In the example above the player will be the fourth sprite to be drawn inside its sprite group.
 
-.. function:: sprite.moveBefore(name)
+.. function:: sprite.drawBefore(name)
 
     This function moves the sprite in order to be drawn before the sprite referenced by the name parameter.
     Both sprites must be inside the same sprite group.
@@ -382,9 +383,9 @@ Drawing Order Functions
 
     **Example**::
 
-        friGame.sprites.player.moveBefore('enemy');
+        friGame.sprites.player.drawBefore('enemy');
 
-.. function:: sprite.moveAfter(name)
+.. function:: sprite.drawAfter(name)
 
     This function moves the sprite in order to be drawn after the sprite referenced by the name parameter.
     Both sprites must be inside the same sprite group.
@@ -395,7 +396,7 @@ Drawing Order Functions
 
     **Example**::
 
-        friGame.sprites.player.moveAfter('enemy');
+        friGame.sprites.player.drawAfter('enemy');
 
 Transform Functions
 -------------------
@@ -613,13 +614,13 @@ The |playground| is the only sprite group that cannot be :func:`resized <rect.re
     The **callback** function will be called with the following parameters:
 
         - :this: The sprite or sprite group object
-        - :name: The name of the sprite or sprite group
+        - :node: The sprite or sprite group object
 
     The callback will be called as long as there are sprites and groups inside the group and the callback return value is |falsy|.
 
     **Example**::
 
-        friGame.sprites.player.children(function (name) {
+        friGame.sprites.player.children(function (node) {
             this.show();
         });
 
