@@ -635,7 +635,7 @@ The |playground| is the only sprite group that cannot be :func:`resized <rect.re
     Options may include:
 
     - :background: The name of a gradient or the name of an animation, or |falsy| to remove the background
-    - :backgroundType: If the background is an animation, **friGame.BACKGROUND_TILED** sets a tiled background and **friGame.BACKGROUND_STRETCHED** sets a stretched background
+    - :backgroundType: If the background is an animation, **friGame.BACKGROUND_TILED** (default) sets a tiled background and **friGame.BACKGROUND_STRETCHED** sets a stretched background
 
     .. note::
 

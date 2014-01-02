@@ -190,3 +190,35 @@ Misc. Utility Functions
         zero = friGame.clamp(-20.6, 0, 255);
         two_hundred_and_fifty_five = friGame.clamp(300, 0, 255);
 
+
+.. function:: friGame.Maker(proto)
+
+    This function returns a maker function that will create a new object derived from the proto parameter
+    using `prototypal inheritance`_, and will call the init function of the newly created object
+
+    :param proto: The prototype object
+
+    :returns: The maker function
+
+    **Example**::
+
+        // The prototype object
+        PPlayer = {
+            // Some default values
+            grace: false,
+            replay: 3,
+            shield: 3,
+            respawnTime: -1,
+
+            // This function will be called by the maker function
+            init: function (node) {
+                this.node = node;
+            }
+        };
+
+        // Player is the maker function
+        Player = friGame.Maker(PPlayer);
+
+        // new_player is a new object derived from PPlayer
+        new_player = Player(friGame.sprites.player);
+

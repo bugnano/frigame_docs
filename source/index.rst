@@ -4,15 +4,30 @@
 About friGame
 =============
 
-friGame is a game development library in JavaScript/`jQuery`_. It allows to create 2D games that run in any modern web browser
+friGame is a game development library in JavaScript/`jQuery`_ written by Franco Bugnano. It allows creating 2D games that run in any modern web browser
 without having to rely on external plugins such as Flash_.
 
 It started as a porting of the excellent gameQuery_ library by Selim Arsever in order to use the |canvas| element, but
 it has developed since then its own set of unique features.
 
-gameQuery_ Copyright (c) 2008-2012 Selim Arsever, licensed under the MIT
+gameQuery_ Copyright (c) 2008-2013 Selim Arsever, licensed under the MIT
 
-friGame Copyright (c) 2011-2012 Franco Bugnano, licensed under the MIT
+friGame Copyright (c) 2011-2014 Franco Bugnano, licensed under the MIT
+
+Contribution / Contact information
+----------------------------------
+
+friGame development is hosted on BitBucket_. If you find a bug, please use the `issue tracker`_.
+
+If you have any questions regarding the usage of friGame, feel free to ask a question on StackExchange_ using the tag ``frigame``.
+
+For any other kind of question, suggestion, or comment, you can send me an email at the address: info@frigame.org
+
+.. raw:: html
+
+    <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-lang="en" data-size="large" data-related="friGame" data-text="Checking out this JavaScript game development library">Tweet</a>
+    <a href="https://twitter.com/friGame" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @friGame</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
 

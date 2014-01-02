@@ -85,7 +85,7 @@ Animations
 
     Options may include:
 
-    - :numberOfFrame: the total number of frame in the animation (for example for a 10x10 sprite with 15 frames your image will be 10x150 or 150x10)
+    - :numberOfFrame: the total number of frame in the animation (for example for a 10x10 sprite with 15 frames your image will be 10x150 or 150x10 -- default: 1)
     - :rate: the number of milliseconds between two frame
     - :type: either **friGame.ANIMATION_VERTICAL** for vertically stacked frames or **friGame.ANIMATION_HORIZONTAL** for horizontally layed frames (default)
     - :once: **true** if you don't want the animation to loop, else **false** (default)

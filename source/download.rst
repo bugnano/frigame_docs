@@ -12,5 +12,5 @@ Latest version
 Development version
 -------------------
 
-friGame development is hosted on `BitBucket <https://bitbucket.org/bugnano/frigame>`_.
+Get the latest friGame development snapshot from BitBucket_.
 

@@ -41,7 +41,7 @@ master_doc = 'docs'
 
 # General information about the project.
 project = u'friGame'
-copyright = u'2012, Franco Bugnano'
+copyright = u'2013-2014, Franco Bugnano'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -108,7 +108,7 @@ html_theme_options = {
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = "friGame"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
