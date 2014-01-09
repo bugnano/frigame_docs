@@ -10,7 +10,7 @@ Sound Plugin
 Sound Setup
 ===========
 
-In order to enable sound in a game, the first thing to do is include the frigame.sound.js file.
+In order to enable sound in a game, the first thing to do is include the **frigame.sound.js** file.
 
 As not every browser supports sound, and not every browser supports the same audio formats, there are a few considerations to make:
 
@@ -26,6 +26,7 @@ The audio formats supported by friGame are the following:
 - Ogg/Vorbis (default file extension .ogg or .oga)
 - MP3 (default file extension .mp3) (Either natively with the HTML5 Audio element, or through soundManager2_)
 
+.. _sounds:
 
 Sound API
 =========
@@ -37,6 +38,9 @@ Sound API
     Once all the resources have been loaded, the newly created sound can be accessed with::
 
         friGame.resources[name]
+
+    .. versionchanged:: 2.1.0
+        Added the **streaming** option
 
     :param string name: The name of the sound
     :param soundURLs: The URL of the sound files
@@ -59,6 +63,7 @@ Sound API
 
     - :volume: the sound volume in folating point from 0 (quiet) to 1 (loud -- default)
     - :muted: **true** if the sound is muted else **false** (default)
+    - :streaming: **true** to prefer using HTML5 Audio over the Web Audio API, else **false** (default)
 
     **Example**::
 
@@ -154,4 +159,20 @@ Sound API
     **Example**::
 
         friGame.resources.mySound.resume();
+
+.. function:: sound.tween(properties[, options])
+
+    This function is enabled only if the **frigame.fx.js** plugin has been included before including the **frigame.sound.js** plugin.
+
+    For details on this function see :func:`sprite.tween`.
+
+    The only possible value for the **properties** parameter is: `volume`.
+
+    **Example**::
+
+        friGame.resources.mySound.tween({
+            volume: 0.2
+        }, {
+            duration: 'slow'
+        });
 

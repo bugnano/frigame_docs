@@ -15,5 +15,6 @@ Contents:
     sprite
     control
     sound
+    fx
     std_plugins
 

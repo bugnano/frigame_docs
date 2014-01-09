@@ -246,6 +246,25 @@ Common Functions between Sprites and Groups
 
         friGame.sprites.player.userData.shield -= 1;
 
+
+.. attribute:: sprite.absRect
+
+    **READ ONLY**: A :func:`rect <friGame.Rect>` whose position is always relative to the |playground|, useful for checking collisions
+    between sprites that belong to different sprite groups
+
+    .. versionadded:: 2.1.0
+
+    .. warning::
+
+        This feature is experimental, and it may be removed in future versions
+
+    **Example**::
+
+        if (friGame.sprites.player.absRect.collideRect(friGame.sprites.enemy.absRect)) {
+            handleCollision();
+        }
+
+
 .. function:: sprite.remove()
 
     If it is a sprite it simply removes the sprite;
@@ -285,6 +304,31 @@ Generic Callback Functions
         friGame.playground().registerCallback(function () {
             // Game logic goes here
         }, 30);
+
+
+
+.. function:: sprite.removeCallback(callback)
+
+    This function removes a callback function registered with :func:`registerCallback <sprite.registerCallback>`
+    from the sprite callback queue, so that it will not be called again.
+
+    .. versionadded:: 2.1.0
+
+    :param callback: The function to remove
+
+    :returns: The sprite object
+
+    **Example**::
+
+        function updatePlayer() {
+            // Game logic goes here
+        }
+
+        friGame.playground().registerCallback(updatePlayer, 30);
+
+        friGame.playground().removeCallback(updatePlayer);
+
+
 
 .. function:: sprite.clearCallbacks()
 

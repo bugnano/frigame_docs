@@ -47,7 +47,7 @@ The loader script will then check browser support for canvas and Base64 and will
 	function backendLoaded() {
 		// This function is called when the rendering backend has been loaded
 		// Here the remaining plugins and the core game files can be loaded
-	};
+	}
 
 	Modernizr.load({
 		// If the browser has canvas support, use the canvas backend

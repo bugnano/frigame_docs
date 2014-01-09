@@ -10,13 +10,27 @@ Game Control and Utility Functions
 Game Control
 ============
 
-.. function:: friGame.startGame([callback[, rate]])
+.. attribute:: friGame.REFRESH_RATE
+
+    The constant that represents the game refresh rate expressed in milliseconds.
+    Any parameter in the game that makes use of milliseconds (for example animation frame rate or
+    callback call rate) is rounded to a multiple of this constant.
+
+    Currently it is defined as **1000 / 60**
+
+    .. versionadded:: 2.1.0
+
+
+
+.. function:: friGame.startGame([callback])
 
     This function will prepare the game to be started by pre-loading the resources and will start the main loop.
     If a function is given as a parameter it will be called once everything is loaded.
 
+    .. versionchanged:: 2.1.0
+        It is not possible to change the refresh rate of the game
+
     :param callback: The function to call
-    :param rate: An integer representing the refresh rate of the game in milliseconds (default: 30)
 
     :returns: The friGame object
 
@@ -142,6 +156,12 @@ friGame makes available some functions that are part of the ECMAScript 5 standar
 .. function:: Date.now()
 
     See external reference: `Date.now`_
+
+.. function:: performance.now()
+
+    See external reference: |performance_now|_
+
+
 
 Misc. Utility Functions
 -----------------------

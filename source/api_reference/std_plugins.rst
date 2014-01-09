@@ -7,78 +7,7 @@ Other Standard Plugins
 
 .. contents::
 
-Sprite Fading
-=============
 
-The **frigame.fx.js** file provides fading functions to sprites and sprite groups in a way similar to jQuery_.
-
-.. function:: sprite.fadeIn([duration][, callback])
-
-    This function displays the sprite by fading it to opaque.
-
-    :param duration: A string or number determining how long the fading will run
-    :param callback: A function to call once the fading is complete
-
-    :returns: The sprite object
-
-    The **duration** is given in milliseconds; higher values indicate slower animations, not faster ones.
-    The strings 'fast' and 'slow' can be supplied to indicate durations of 200 and 600 milliseconds, respectively.
-    If any other string is supplied, or if the duration parameter is omitted, the default duration of 400 milliseconds is used.
-
-    The **callback** function will be called with the following parameters:
-
-        - :this: The sprite object
-
-    **Example**::
-
-        friGame.sprites.player.fadeIn(500);
-
-
-.. function:: sprite.fadeOut([duration][, callback])
-
-    This function hides the sprite by fading it to transparent.
-
-    :param duration: A string or number determining how long the fading will run
-    :param callback: A function to call once the fading is complete
-
-    :returns: The sprite object
-
-    The **duration** is given in milliseconds; higher values indicate slower animations, not faster ones.
-    The strings 'fast' and 'slow' can be supplied to indicate durations of 200 and 600 milliseconds, respectively.
-    If any other string is supplied, or if the duration parameter is omitted, the default duration of 400 milliseconds is used.
-
-    The **callback** function will be called with the following parameters:
-
-        - :this: The sprite object
-
-    **Example**::
-
-        friGame.sprites.player.fadeOut('slow', function () {
-            this.remove();
-        });
-
-
-.. function:: sprite.fadeTo(duration, opacity[, callback])
-
-    This function adjusts the opacity of the sprite.
-
-    :param duration: A string or number determining how long the fading will run
-    :param opacity: A number between 0 and 1 denoting the target opacity
-    :param callback: A function to call once the fading is complete
-
-    :returns: The sprite object
-
-    The **duration** is given in milliseconds; higher values indicate slower animations, not faster ones.
-    The strings 'fast' and 'slow' can be supplied to indicate durations of 200 and 600 milliseconds, respectively.
-    If any other string is supplied, or if the duration parameter is omitted, the default duration of 400 milliseconds is used.
-
-    The **callback** function will be called with the following parameters:
-
-        - :this: The sprite object
-
-    **Example**::
-
-        friGame.sprites.player.fadeTo('fast', 0.5);
 
 Keyboard Tracker
 ================

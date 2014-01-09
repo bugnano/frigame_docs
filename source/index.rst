@@ -21,7 +21,7 @@ friGame development is hosted on BitBucket_. If you find a bug, please use the `
 
 If you have any questions regarding the usage of friGame, feel free to ask a question on StackExchange_ using the tag ``frigame``.
 
-For any other kind of question, suggestion, or comment, you can send me an email at the address: info@frigame.org
+If you want to submit a game, or for any other kind of question, suggestion, or comment, you can send me an email at the address: info@frigame.org
 
 .. raw:: html
 
@@ -59,6 +59,7 @@ Features
 - Sprites with animations, movement, collision detection, callbacks, transforms
 - Sprite layers (grouping) with optional background image or gradient
 - Extensible resource manager
-- Sound support using HTML5 Audio where available, with optional fallback to Flash
+- Sound support using Web Audio API and HTML5 Audio where available, with optional fallback to Flash
+- Extensible tweening for sprite and sound properties
 - Optional keyboard and mouse state polling
 

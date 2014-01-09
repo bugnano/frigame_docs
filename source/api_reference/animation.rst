@@ -7,6 +7,8 @@ Resource Manager, Animations and Gradients
 
 .. contents::
 
+.. _resource-manager:
+
 Resource Manager
 ================
 
@@ -65,6 +67,7 @@ it to support levels and any other reource used by the game is encouraged.
 
 		friGame.resourceManager.clear();
 
+.. _animations:
 
 Animations
 ==========
