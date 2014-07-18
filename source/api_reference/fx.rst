@@ -21,6 +21,8 @@ User API
 
     This function allows to smoothly transition on any numeric sprite or sprite group property.
 
+    .. versionadded:: 2.1.0
+
     :param properties: An object literal describing the target values
     :param options: An object literal
 
@@ -31,6 +33,7 @@ User API
 
     Options may include:
 
+    - :name: A string that identifies the tweening, useful for :func:`removeTween <sprite.removeTween>`
     - :duration: A string or number determining how long the tweening will run
     - :easing: A string indicating which easing function to use for the transition
     - :callback: A function to call once the tweening is complete
@@ -60,6 +63,42 @@ User API
             duration: 1500,
             easing: 'easeOutElastic'
         });
+
+.. function:: sprite.removeTween(name)
+
+    This function removes a tweening registered with :func:`tween <sprite.tween>`
+    from the sprite tweening queue.
+
+    .. versionadded:: 2.1.1
+
+    :param name: The name of the tweening to remove
+
+    :returns: The sprite object
+
+    **Example**::
+
+        friGame.sprites.player.tween({
+            name: 'tweenMovement',
+            centerx: 100,
+            centery: 300
+        }, {
+            duration: 1500,
+            easing: 'easeOutElastic'
+        });
+
+        friGame.sprites.player.removeTween('tweenMovement');
+
+.. function:: sprite.clearTweens()
+
+    This function removes all the tweenings associated to the sprite.
+
+    .. versionadded:: 2.1.1
+
+    :returns: The sprite object
+
+    **Example**::
+
+        friGame.sprites.player.clearTweens();
 
 .. function:: sprite.fadeIn([duration][, callback])
 

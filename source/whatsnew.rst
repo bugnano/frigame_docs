@@ -7,13 +7,36 @@ What's new
 
 
 
+Version 2.1.1
+=============
+
+Features added
+--------------
+
+- Sprites and sprite groups now have a :func:`removeTween <sprite.removeTween>` and a :func:`clearTweens <sprite.clearTweens>` function, in order to remove a specific tweening, or all the tweenings registered with :func:`tween <sprite.tween>`.
+
+Incompatible changes
+--------------------
+
+- The experimental absRect property for sprites and groups has been removed as it slowed down too much the rendering of the scene.
+
+Bugs fixed
+----------
+
+- Fixed sloppy animation in the DOM renderer
+- Don't retrigger the animation from the beginning when changing only the refresh rate in setAnimation
+- Reset the callback and paused state when changing animations
+- Calling the :func:`startGame <friGame.startGame>` and :func:`stopGame <friGame.stopGame>` functions from a callback registered with :func:`registerCallback <sprite.registerCallback>` did not work properly.
+
+
+
 Version 2.1.0
 =============
 
 Features added
 --------------
 
-- The sprites and sprite groups now have an experimental :attr:`absRect <sprite.absRect>` property, that can be used to check for collisions for sprites that belong to different sprite groups
+- The sprites and sprite groups now have an experimental absRect property, that can be used to check for collisions for sprites that belong to different sprite groups
 - Sprites and sprite groups now have a :func:`removeCallback <sprite.removeCallback>` function, in order to remove a specific callback function registered with :func:`registerCallback <sprite.registerCallback>`.
 - Only the sprites and sprite groups that are within the playground boundaries are drawn. This should increase performance in large games.
 - friGame uses, and makes available the |performance_now|_ function even in older browsers.

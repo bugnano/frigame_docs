@@ -9,7 +9,7 @@ Latest version
 
 It is always recommended to use the latest version, in order to have all the new features and bug fixes.
 
-`Download friGame version 2.1.0 <downloads/frigame-2.1.0.zip>`_
+`Download friGame version 2.1.1 <downloads/frigame-2.1.1.zip>`_
 
 Version 2.1.0 introduces some incompatilbe changes compared to version 2.0.0.
 Please see the :doc:`whatsnew` document for more information.
@@ -20,6 +20,7 @@ Older versions
 
 Older versions are kept for historical reasons.
 
+`Download friGame version 2.1.0 <downloads/frigame-2.1.0.zip>`_
 `Download friGame version 2.0.0 <downloads/frigame-2.0.0.zip>`_
 
 Development version

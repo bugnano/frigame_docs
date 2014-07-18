@@ -36,9 +36,9 @@ What it can do
 
 .. raw:: html
 
-    <div id="playground" style="position: relative; width: 320px; height: 480px; margin-left: auto; margin-right: auto"></div>
-    <script src="_static/deps.js"></script>
-    <script src="_static/arkanoid.js"></script>
+    <div id="playground" style="position: relative; width: 512px; height: 448px; margin-left: auto; margin-right: auto"></div>
+    <script src="_static/modernizr.custom.js"></script>
+    <script src="_static/loader.js"></script>
 
 
 
