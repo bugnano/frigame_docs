@@ -12,7 +12,7 @@ it has developed since then its own set of unique features.
 
 gameQuery_ Copyright (c) 2008-2013 Selim Arsever, licensed under the MIT
 
-friGame Copyright (c) 2011-2014 Franco Bugnano, licensed under the MIT
+friGame Copyright (c) 2011-2016 Franco Bugnano, licensed under the MIT
 
 Contribution / Contact information
 ----------------------------------

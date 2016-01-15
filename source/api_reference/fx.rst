@@ -9,7 +9,7 @@ Tweening Plugin
 
 The **frigame.fx.js** file provides tweening functions to sprites and sprite groups.
 
-It is recommended to include this plugin right after the renderer, before any other plugin, so that
+It is recommended to include this plugin right after the renderer or the DOM Ready plugin, before any other plugin, so that
 tweening can be made available to other plugins as well (for example enabling volume fading for sounds).
 
 
@@ -30,6 +30,12 @@ User API
 
     The supported **properties** are: `left`, `right`, `centerx`, `top`, `bottom`, `centery`, `width`,
     `height`, `halfWidth`, `halfHeight`, `radius`, `rotate`, `scale`, `scalex`, `scaley`, `opacity`.
+
+    .. versionchanged:: 2.2.0
+        For sprite groups, the following additional **properties** are supported:
+
+        `borderRadius`, `borderTopLeftRadius`, `borderTopRightRadius`, `borderBottomRightRadius`, `borderBottomLeftRadius`, `borderWidth`.
+
 
     Options may include:
 
@@ -78,10 +84,10 @@ User API
     **Example**::
 
         friGame.sprites.player.tween({
-            name: 'tweenMovement',
             centerx: 100,
             centery: 300
         }, {
+            name: 'tweenMovement',
             duration: 1500,
             easing: 'easeOutElastic'
         });
@@ -114,7 +120,7 @@ User API
 
     The **duration** is given in milliseconds; higher values indicate slower animations, not faster ones.
     The strings 'fast' and 'slow' can be supplied to indicate durations of 200 and 600 milliseconds, respectively.
-    If any other string is supplied, or if the duration parameter is omitted, the default duration of 400 milliseconds is used.
+    If any other string is supplied, the default duration of 400 milliseconds is used.
 
     The **callback** function will be called with the following parameters:
 
@@ -146,7 +152,7 @@ User API
 
     The **duration** is given in milliseconds; higher values indicate slower animations, not faster ones.
     The strings 'fast' and 'slow' can be supplied to indicate durations of 200 and 600 milliseconds, respectively.
-    If any other string is supplied, or if the duration parameter is omitted, the default duration of 400 milliseconds is used.
+    If any other string is supplied, the default duration of 400 milliseconds is used.
 
     The **callback** function will be called with the following parameters:
 
@@ -184,7 +190,7 @@ User API
 
     The **duration** is given in milliseconds; higher values indicate slower animations, not faster ones.
     The strings 'fast' and 'slow' can be supplied to indicate durations of 200 and 600 milliseconds, respectively.
-    If any other string is supplied, or if the duration parameter is omitted, the default duration of 400 milliseconds is used.
+    If any other string is supplied, the default duration of 400 milliseconds is used.
 
     The **callback** function will be called with the following parameters:
 
@@ -199,5 +205,36 @@ User API
             opacity: 0.5
         }, {
             duration: 'fast'
+        });
+
+
+.. function:: friGame.delay(duration[, callback])
+
+    This function calls a callback function after a specified delay.
+
+    .. versionadded:: 2.2.0
+
+    .. warning::
+
+        This feature is experimental, and it may be removed in future versions
+
+
+    :param duration: A string or number determining the delay at which te callback will be called
+    :param callback: A function to call once the delay is complete
+
+    :returns: The sprite object
+
+    The **duration** is given in milliseconds; higher values indicate slower animations, not faster ones.
+    The strings 'fast' and 'slow' can be supplied to indicate durations of 200 and 600 milliseconds, respectively.
+    If any other string is supplied, the default duration of 400 milliseconds is used.
+
+    The **callback** function will be called with the following parameters:
+
+        - :this: The friGame object
+
+    **Example**::
+
+        friGame.delay(1000, function () {
+            // Code here is executed 1 second after the friGame.delay function has been called
         });
 

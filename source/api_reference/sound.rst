@@ -12,6 +12,9 @@ Sound Setup
 
 In order to enable sound in a game, the first thing to do is include the **frigame.sound.js** file.
 
+.. versionchanged:: 2.2.0
+    The **frigame.sound.js** plugin depends on **frigame.domready.js**, so make sure to include it first.
+
 As not every browser supports sound, and not every browser supports the same audio formats, there are a few considerations to make:
 
 - In order to have the best browser support, it is better to encode the same audio file twice, resulting in one mp3 file and one ogg/vorbis file
@@ -25,6 +28,12 @@ The audio formats supported by friGame are the following:
 - Uncompressed PCM/WAVE (default file extension .wav) (Not recommended as it results in huge files)
 - Ogg/Vorbis (default file extension .ogg or .oga)
 - MP3 (default file extension .mp3) (Either natively with the HTML5 Audio element, or through soundManager2_)
+
+.. versionchanged:: 2.2.0
+    New formats supported:
+
+    - Ogg/Opus (default file extension .opus)
+    - mp4/aac (default file extension .aac or .m4a or .mp4)
 
 .. _sounds:
 

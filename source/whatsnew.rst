@@ -7,6 +7,38 @@ What's new
 
 
 
+Version 2.2.0
+=============
+
+Features added
+--------------
+
+- Removed the jQuery_ dependency for all but the DOM backend
+- Implemented the **frigame.domready.js** plugin that provides the :func:`friGame.ready <friGame.ready>` function
+- A previuosly created |canvas| element can be passed as the **parentDOM** to the :func:`playground <friGame.playground>` function
+- Various speed improvements
+- Sprites and sprite groups now have a :func:`getAbsRect <sprite.getAbsRect>` function, that can be used to check for collisions for sprites that belong to different sprite groups
+- Sprite groups can have a :func:`border <group.setBorder>`, and rounded corners
+- Implemented the **frameset** parameter for :func:`animations <friGame.resourceManager.addAnimation>`
+- Implemented the :func:`forceRedraw <friGame.forceRedraw>` function
+- The :doc:`Sound Plugin <api_reference/sound>` now supports the Ogg/Opus and mp4/aac audio formats
+- Implemented the :func:`friGame.delay <friGame.delay>` function in the :doc:`Tweening Plugin <api_reference/fx>`
+
+Incompatible changes
+--------------------
+
+- The :func:`playgroundCallback <friGame.playgroundCallback>` no longer takes a jQuery_ object as a parameter, but a native DOM element instead
+- The :doc:`Sound Plugin <api_reference/sound>` now depends on the **frigame.domready.js** plugin
+- When removing a sprite using the :func:`remove <sprite.remove>` function, if its :attr:`userData <sprite.userData>` has a **remove()** method, it will be called automatically
+
+Bugs fixed
+----------
+
+- Fixed audio muting on some implementations
+- Fixed image preloading on some implementations
+
+
+
 Version 2.1.1
 =============
 

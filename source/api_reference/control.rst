@@ -64,6 +64,19 @@ Game Control
         friGame.stopGame();
 
 
+.. function:: friGame.forceRedraw()
+
+    This function forces a redraw of the scene. It is useful when the scene has been chenged during a stopped game.
+
+    .. versionadded:: 2.2.0
+
+    :returns: The friGame object
+
+    **Example**::
+
+        friGame.forceRedraw();
+
+
 .. function:: friGame.loadCallback(callback)
 
     This function provides a callback to be called with the current loading progress as argument.
@@ -131,10 +144,13 @@ Game Control
         - :this: The |playground| object
         - :dom: The |playground| parentDOM object
 
+    .. versionchanged:: 2.2.0
+        The **dom** parameter is not a jQuery_ object, but a native DOM element instead
+
     **Example**::
 
         friGame.playgroundCallback(function (dom) {
-            var offset = dom.offset();
+            var offset = $(dom).offset();
 
             // Some initializations
         });

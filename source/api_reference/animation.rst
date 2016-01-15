@@ -72,7 +72,7 @@ it to support levels and any other reource used by the game is encouraged.
 Animations
 ==========
 
-.. function:: friGame.resourceManager.addAnimation(name, imageURL[, options])
+.. function:: friGame.resourceManager.addAnimation(name[, imageURL][, options])
 
     friGame allows you to declare animations.
 
@@ -81,14 +81,14 @@ Animations
     An animation in itself doesn't exist until it's associated with a sprite.
 
     :param string name: The name of the animation
-    :param string imageURL: The URL of the image
+    :param string imageURL: The URL of the image (optional)
     :param options: An object literal describing the animation
 
     :returns: The resource manager object
 
     Options may include:
 
-    - :numberOfFrame: the total number of frame in the animation (for example for a 10x10 sprite with 15 frames your image will be 10x150 or 150x10 -- default: 1)
+    - :numberOfFrame: the total number of frame in the sprite-sheet (for example for a 10x10 sprite with 15 frames your image will be 10x150 or 150x10 -- default: 1)
     - :rate: the number of milliseconds between two frame
     - :type: either **friGame.ANIMATION_VERTICAL** for vertically stacked frames or **friGame.ANIMATION_HORIZONTAL** for horizontally layed frames (default)
     - :once: **true** if you don't want the animation to loop, else **false** (default)
@@ -98,6 +98,16 @@ Animations
     - :offsety: the offset along the y-axis for the position of the first frame in the image (for use with sprite-sheets)
     - :frameWidth: the width of one frame (required for multi index **friGame.ANIMATION_VERTICAL**, otherwise optional)
     - :frameHeight: the height of one frame (required for multi index **friGame.ANIMATION_HORIZONTAL**, otherwise optional)
+    - :frameset: a list of objects describing the various sprite-sheets used (required if the imageURL parameter is omitted, otherwise optional)
+
+    .. versionchanged:: 2.2.0
+        The **frameset** option is a list of objects with one or more of the following properties:
+
+        - :imageURL: The URL of the image (default: the one passed as the imageURL parameter if passed, or the imageURL of the first element of the list)
+        - :numberOfFrame: the total number of frame in the sprite-sheet (for example for a 10x10 sprite with 15 frames your image will be 10x150 or 150x10 -- default: 1)
+        - :type: either **friGame.ANIMATION_VERTICAL** for vertically stacked frames or **friGame.ANIMATION_HORIZONTAL** for horizontally layed frames (default)
+        - :offsetx: the offset along the x-axis for the position of the first frame in the image (for use with sprite-sheets)
+        - :offsety: the offset along the y-axis for the position of the first frame in the image (for use with sprite-sheets)
 
     **Example**::
 
@@ -106,6 +116,24 @@ Animations
             rate: 90,
             type: friGame.ANIMATION_VERTICAL,
             once: true
+        });
+
+        // The following animation will have a total of 20 frames
+        friGame.resourceManager.addAnimation('myAnimation', {
+            rate: 90,
+            once: true,
+            frameset: [
+                {
+                    imageURL: './myAnimation.png',
+                    numberOfFrame: 10,
+                    type: friGame.ANIMATION_VERTICAL
+                },
+                {
+                    imageURL: './otherSpriteSheet.png',
+                    numberOfFrame: 10,
+                    type: friGame.ANIMATION_VERTICAL
+                }
+            ]
         });
 
 

@@ -9,6 +9,46 @@ Other Standard Plugins
 
 
 
+DOM Ready
+=========
+
+The **frigame.domready.js** file provides a callback function to be executed when the DOM is fully loaded.
+
+It is recommended to include this plugin right after the renderer, before any other plugin, so that
+any plugin that depends on the DOM Ready event can be used.
+
+.. function:: friGame.ready(callback)
+
+    This function specifies a function to be called when the DOM is fully loaded.
+    If this function is called more than once, all the callbacks will be called in the same order as
+    the friGame.ready function calls.
+
+    .. versionadded:: 2.2.0
+
+    :param callback: The function to call
+
+    :returns: The friGame object
+
+    The **callback** function will be called with the following parameters:
+
+        - :this: The friGame object
+
+    **Example**::
+
+        friGame.ready(function () {
+            friGame.resourceManager
+                .addAnimation('player', 'player.png')
+            ;
+
+            friGame.startGame(function () {
+                friGame.playground()
+                    .addSprite('player', {animation: 'player'})
+                ;
+            });
+        });
+
+
+
 Keyboard Tracker
 ================
 

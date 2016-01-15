@@ -17,6 +17,7 @@
 .. _Mixer: https://bitbucket.org/bugnano/frigame_mixer
 .. _Tile: https://bitbucket.org/bugnano/frigame_tile
 .. _Isometric: https://bitbucket.org/bugnano/frigame_isometric
+.. _Text: https://bitbucket.org/bugnano/frigame_text
 
 .. |falsy| replace:: falsy (null, undefined, false, 0, or empty string)
 .. |playground| replace:: :func:`playground <friGame.playground>`

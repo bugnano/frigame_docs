@@ -255,6 +255,9 @@ Common Functions between Sprites and Groups
     The sprite (or sprite group), and its contained sprites and groups also get removed from
     :attr:`friGame.sprites`
 
+    .. versionchanged:: 2.2.0
+        If the sprite :attr:`userData <sprite.userData>` has a **remove()** method, it will be called automatically by this function
+
     :returns: undefined
 
     **Example**::
@@ -541,6 +544,25 @@ Transform Functions
 
         friGame.sprites.player.opacity(0.5);
 
+Utility Functions
+-----------------
+
+.. function:: sprite.getAbsRect()
+
+    Returns a new :func:`rect <friGame.Rect>` whose position is always relative to the |playground|, useful for checking collisions
+    between sprites that belong to different sprite groups
+
+    .. versionadded:: 2.2.0
+
+    :returns: The new :func:`rect <friGame.Rect>` relative to the |playground|
+
+    **Example**::
+
+        if (friGame.sprites.player.getAbsRect().collideRect(friGame.sprites.enemy.getAbsRect())) {
+            handleCollision();
+        }
+
+
 
 .. _sprites:
 
@@ -598,11 +620,19 @@ The |playground| is the only sprite group that cannot be :func:`resized <rect.re
 
     This function makes a playground DOM object returns it as a sprite group.
 
-    :param parentDOM: A jQuery object inside which the playground will be created. If omitted it defaults to $('#playground')
+    :param parentDOM: A DOM object inside which the playground will be created. If omitted it defaults to the element with ID 'playground'
 
     :returns: The group object
 
-    Note that the parentDOM parameter is required only the first time the function is called.
+    .. versionchanged:: 2.2.0
+        The **parentDOM** parameter can be one of the following:
+
+        - A string with the ID of the element inside of which the playground will be created
+        - A DOM element
+        - A jQuery_ object (Not recommended)
+        - An already created |canvas| element (Only if the canvas renderer is used)
+
+    Note that the **parentDOM** parameter is required only the first time the function is called.
     Subsequent calls will ignore this parameter, which means multiple playgrounds are not supported.
 
     After calling this function once, subsequent calls to this function are the same as accessing the playground object with::
@@ -611,7 +641,7 @@ The |playground| is the only sprite group that cannot be :func:`resized <rect.re
 
     **Example**::
 
-        friGame.playground()
+        friGame.playground('#playground')
             .addSprite('player', {animation: playerAnimation})
         ;
 
@@ -672,6 +702,48 @@ The |playground| is the only sprite group that cannot be :func:`resized <rect.re
         friGame.sprites.group2.setBackground({
             background: 'grassblock',
             backgroundType: friGame.BACKGROUND_STRETCHED
+        });
+
+.. function:: group.setBorder([options])
+
+    This function allow to change the border of the group on which it's called.
+
+    .. versionadded:: 2.2.0
+
+    :param options: An object literal
+
+    :returns: The group object
+
+    Options may include:
+
+    - :borderColor: The name of a gradient, or |falsy| to remove the border
+    - :borderWidth: The width of the border (default: 1)
+    - :borderRadius: The radius of all the corners (default: 0)
+    - :borderTopLeftRadius: The radius of the top-left corner (default: 0)
+    - :borderTopRightRadius: The radius of the top-right corner (default: 0)
+    - :borderBottomRightRadius: The radius of the bottom-right corner (default: 0)
+    - :borderBottomLeftRadius: The radius of the bottom-left corner (default: 0)
+
+    The **borderRadius** shorthand option can be one of the following:
+
+    - A Number that specifies the radius for all the corners
+    - An Array that specifies the radius for each corner in the order: top-left, top-right, bottom-right, bottom-left
+
+    .. note::
+
+        The borderWidth does not affect the :func:`rect <friGame.Rect>` properties of the group, which means that
+        adding a border to an existing group will not affect its size or position.
+
+    .. note::
+
+        For maximum compatibility, it is recommended to use a solid color as a border, instead of a gradient.
+
+    **Example**::
+
+        friGame.sprites.group2.setBorder({
+            borderColor: 'blue',
+            borderRadius: [17, 5, 23, 11],
+            borderWidth: 12
         });
 
 .. function:: group.crop(cropping)
@@ -741,7 +813,7 @@ The |playground| is the only sprite group that cannot be :func:`resized <rect.re
 
     :returns: The newly created sprite group
 
-    Options contain both :func:`rect <friGame.Rect>` and :func:`background <group.setBackground>` parameters.
+    Options contain the :func:`rect <friGame.Rect>`, :func:`background <group.setBackground>`, and :func:`border <group.setBorder>` parameters.
 
     **Example**::
 
