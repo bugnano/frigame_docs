@@ -7,6 +7,30 @@ What's new
 
 
 
+Version 2.3.0
+=============
+
+Features added
+--------------
+
+- Implemented the :doc:`2D Vector Math Plugin <api_reference/vec2>`
+- Various speed and smoothness improvements
+- The :func:`removeCallback <sprite.removeCallback>` and :func:`removeTween <sprite.removeTween>` functions now have a **suppressWarning** option
+- Sprites and sprite groups now have a :func:`getDrawIndex <sprite.getDrawIndex>` function, for knowing the sprite drawing position.
+
+Incompatible changes
+--------------------
+
+- Now a warning or an error is shown on the console if some functions are used incorrectly, or if a sprite or resource name is overwritten
+
+Bugs fixed
+----------
+
+- Fixed calling :func:`removeCallback <sprite.removeCallback>` and :func:`clearCallbacks <sprite.clearCallbacks>` inside a callback
+- The :func:`playgroundCallback <friGame.playgroundCallback>` function can be called also when the playground has already been created
+
+
+
 Version 2.2.0
 =============
 

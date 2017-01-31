@@ -70,7 +70,7 @@ User API
             easing: 'easeOutElastic'
         });
 
-.. function:: sprite.removeTween(name)
+.. function:: sprite.removeTween(name[, options])
 
     This function removes a tweening registered with :func:`tween <sprite.tween>`
     from the sprite tweening queue.
@@ -78,8 +78,16 @@ User API
     .. versionadded:: 2.1.1
 
     :param name: The name of the tweening to remove
+    :param options: An object literal
+
+    .. versionchanged:: 2.3.0
+        Added the **options** parameter
 
     :returns: The sprite object
+
+    Options may include:
+
+    - :suppressWarning: **true** to suppress the warning, **false** to show a warning on the console if the tweening was not registered before
 
     **Example**::
 

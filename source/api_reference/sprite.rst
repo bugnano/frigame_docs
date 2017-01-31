@@ -292,7 +292,7 @@ Generic Callback Functions
 
 
 
-.. function:: sprite.removeCallback(callback)
+.. function:: sprite.removeCallback(callback[, options])
 
     This function removes a callback function registered with :func:`registerCallback <sprite.registerCallback>`
     from the sprite callback queue, so that it will not be called again.
@@ -300,8 +300,16 @@ Generic Callback Functions
     .. versionadded:: 2.1.0
 
     :param callback: The function to remove
+    :param options: An object literal
+
+    .. versionchanged:: 2.3.0
+        Added the **options** parameter
 
     :returns: The sprite object
+
+    Options may include:
+
+    - :suppressWarning: **true** to suppress the warning, **false** to show a warning on the console if the callback was not registered before
 
     **Example**::
 
@@ -386,6 +394,18 @@ Drawing Order Functions
     **Example**::
 
         friGame.sprites.player.drawLast();
+
+.. function:: sprite.getDrawIndex()
+
+    This function returns the sprite drawing position.
+
+    .. versionadded:: 2.3.0
+
+    :returns: The 0 based index of the drawing position of the sprite
+
+    **Example**::
+
+        var index = friGame.sprites.player.getDrawIndex();
 
 .. function:: sprite.drawTo(index)
 

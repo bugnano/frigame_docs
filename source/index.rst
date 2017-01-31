@@ -4,7 +4,7 @@
 About friGame
 =============
 
-friGame is a game development library in JavaScript/`jQuery`_ written by Franco Bugnano. It allows creating 2D games that run in any modern web browser
+friGame is a game development library in JavaScript written by Franco Bugnano. It allows creating 2D games that run in any modern web browser
 without having to rely on external plugins such as Flash_.
 
 It started as a porting of the excellent gameQuery_ library by Selim Arsever in order to use the |canvas| element, but
@@ -12,7 +12,7 @@ it has developed since then its own set of unique features.
 
 gameQuery_ Copyright (c) 2008-2013 Selim Arsever, licensed under the MIT
 
-friGame Copyright (c) 2011-2016 Franco Bugnano, licensed under the MIT
+friGame Copyright (c) 2011-2017 Franco Bugnano, licensed under the MIT
 
 Contribution / Contact information
 ----------------------------------

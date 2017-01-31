@@ -16,5 +16,6 @@ Contents:
     control
     sound
     fx
+    vec2
     std_plugins
 
