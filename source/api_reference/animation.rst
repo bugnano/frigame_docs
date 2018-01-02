@@ -44,13 +44,21 @@ it to support levels and any other reource used by the game is encouraged.
 		return friGame.resourceManager.addResource(name, animation);
 
 
-.. function:: friGame.resourceManager.removeResource(name)
+.. function:: friGame.resourceManager.removeResource(name[, options])
 
     This function removes the resource from ``friGame.resources`` and frees the memory associated with it.
 
     :param string name: The name of the resource
+    :param options: An object literal
+
+    .. versionchanged:: 2.4.0
+        Added the **options** parameter
 
     :returns: The resource manager object
+
+    Options may include:
+
+    - :suppressWarning: **true** to suppress the warning, **false** to show a warning on the console if the resource was already removed
 
     **Example**::
 

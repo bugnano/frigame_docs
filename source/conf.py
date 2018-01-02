@@ -41,7 +41,7 @@ master_doc = 'docs'
 
 # General information about the project.
 project = u'friGame'
-copyright = u'2013-2017, Franco Bugnano'
+copyright = u'2013-2018, Franco Bugnano'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

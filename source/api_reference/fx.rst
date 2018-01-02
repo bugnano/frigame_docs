@@ -36,6 +36,10 @@ User API
 
         `borderRadius`, `borderTopLeftRadius`, `borderTopRightRadius`, `borderBottomRightRadius`, `borderBottomLeftRadius`, `borderWidth`.
 
+    .. versionchanged:: 2.4.0
+        The following additional **properties** are supported:
+
+        `transformOrigin`, `transformOriginx`, `transformOriginy`.
 
     Options may include:
 

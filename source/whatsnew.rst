@@ -5,6 +5,30 @@
 What's new
 ==========
 
+.. TO DO -- In una versione futura, ci sara' da mettere che si possono creare colori solidi usando direttamente friGame.Gradient,
+    senza bisogno di passare dal resourceManager
+
+Version 2.4.0
+=============
+
+Features added
+--------------
+
+- The :func:`removeResource <friGame.resourceManager.removeResource>` function now has a **suppressWarning** option
+- Implemented the :func:`collideRectCircle <rect.collideRectCircle>` and :func:`collideCircleRect <rect.collideCircleRect>` functions
+- Implemented the :func:`transformOrigin <sprite.transformOrigin>`, :func:`transformOriginx <sprite.transformOriginx>` and :func:`transformOriginy <sprite.transformOriginy>` functions
+- Some speed improvements when using lots of sprite groups
+
+Incompatible changes
+--------------------
+
+- The :func:`collidePointRect <rect.collidePointRect>` and :func:`collidePointCircle <rect.collidePointCircle>` functions have been deprecated, and renamed to :func:`collideRectPoint <rect.collideRectPoint>` and :func:`collideCirclePoint <rect.collideCirclePoint>`
+
+Bugs fixed
+----------
+
+- Fixed a 1-frame glitch when calling :func:`setAnimation <sprite.setAnimation>` on moving sprites
+
 
 
 Version 2.3.0

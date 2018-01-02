@@ -51,18 +51,24 @@ Backend specific requirements
 DOM
 ---
 
-The DOM backend relies on jQuery_ (Tested with versions 1.4.2 and 1.8.1) and the Modernizr_ feature detection library (Tested with version 2.6.1) in order to provide
+The DOM backend relies on jQuery_ and the Modernizr_ feature detection library, in order to provide
 cross-browser compatibility.
 
 If you want to build a custom version of Modernizr_, be sure to include the tests for:
 
-- background-size
-- opacity
-- rgba()
-- CSS 2D Transforms
-- SVG
-- Modernizr.prefixed()
-- Border Radius
+- canvas
+- svg
+- css backgroundblendmode
+- css backgroundsize
+- css borderradius
+- css gradients
+- css mask
+- css opacity
+- css rgba
+- css transforms
+
+- prefixed
+- prefixedCSSValue
 
 For older browsers that do not support the `window.btoa`_ method, make sure to include the `base64.js`_ file too.
 

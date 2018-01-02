@@ -2,12 +2,15 @@
 .. _gameQuery: http://gamequeryjs.com/
 .. _jQuery: http://jquery.com/
 .. _Modernizr: http://modernizr.com/
+.. _yepnope: http://yepnopejs.com/
 .. _keydown: http://api.jquery.com/keydown/
 .. _keyup: http://api.jquery.com/keyup/
 .. _soundManager2: http://www.schillmania.com/projects/soundmanager2/
 .. _`gameQuery API Reference`: http://gamequeryjs.com/documentation/api/
+.. _`gameQuery Tutorial`: http://gamequeryjs.com/documentation/first-tutorial/
 .. _Box2D: https://github.com/hecht-software/box2dweb
 .. _Flash: http://www.adobe.com/go/getflashplayer
+.. _`The Gimp`: http://www.gimp.org/
 .. _UglifyJS: https://github.com/mishoo/UglifyJS2
 .. _BitBucket: https://bitbucket.org/bugnano/frigame
 .. _`issue tracker`: https://bitbucket.org/bugnano/frigame/issues
@@ -18,6 +21,7 @@
 .. _Tile: https://bitbucket.org/bugnano/frigame_tile
 .. _Isometric: https://bitbucket.org/bugnano/frigame_isometric
 .. _Text: https://bitbucket.org/bugnano/frigame_text
+.. _Sorted: https://bitbucket.org/bugnano/frigame_sorted
 
 .. |falsy| replace:: falsy (null, undefined, false, 0, or empty string)
 .. |playground| replace:: :func:`playground <friGame.playground>`

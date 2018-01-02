@@ -12,7 +12,7 @@ it has developed since then its own set of unique features.
 
 gameQuery_ Copyright (c) 2008-2013 Selim Arsever, licensed under the MIT
 
-friGame Copyright (c) 2011-2017 Franco Bugnano, licensed under the MIT
+friGame Copyright (c) 2011-2018 Franco Bugnano, licensed under the MIT
 
 Contribution / Contact information
 ----------------------------------
@@ -37,7 +37,7 @@ What it can do
 .. raw:: html
 
     <div id="playground" style="position: relative; width: 512px; height: 448px; margin-left: auto; margin-right: auto"></div>
-    <script src="_static/modernizr.custom.js"></script>
+    <script src="_static/modernizr.min.js"></script>
     <script src="_static/loader.js"></script>
 
 

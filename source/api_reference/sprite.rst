@@ -177,10 +177,12 @@ Collision Detection
             handleCollision();
         }
 
-.. function:: rect.collidePointRect(x, y)
+.. function:: rect.collideRectPoint(x, y)
 
     This function performs a square to point collision detection. It is useful for example to check if the
     rect has been clicked with the mouse.
+
+    .. versionadded:: 2.4.0
 
     :param x: The x position of the point
     :param y: The y position of the point
@@ -189,7 +191,31 @@ Collision Detection
 
     **Example**::
 
-        if (my_rect.collidePointRect(mouse_pos.x, mouse_pos.y)) {
+        if (my_rect.collideRectPoint(mouse_pos.x, mouse_pos.y)) {
+            handleCollision();
+        }
+
+.. function:: rect.collidePointRect(x, y)
+
+    .. deprecated:: 2.4.0
+        Use the :func:`collideRectPoint <rect.collideRectPoint>` function instead
+
+    An alias to :func:`collideRectPoint <rect.collideRectPoint>` kept for compatibility reasons.
+
+.. function:: rect.collideRectCircle(otherRect)
+
+    This function performs a square to circle collision detection with another rect, treating this rect
+    as the square, and the other rect as the circle.
+
+    .. versionadded:: 2.4.0
+
+    :param otherRect: The other rect
+
+    :returns: **true** if there is a collision, else **false**
+
+    **Example**::
+
+        if (my_rect.collideRectCircle(other_rect)) {
             handleCollision();
         }
 
@@ -207,10 +233,12 @@ Collision Detection
             handleCollision();
         }
 
-.. function:: rect.collidePointCircle(x, y)
+.. function:: rect.collideCirclePoint(x, y)
 
     This function performs a circle to point collision detection. It is useful for example to check if the
     rect has been clicked with the mouse.
+
+    .. versionadded:: 2.4.0
 
     :param x: The x position of the point
     :param y: The y position of the point
@@ -219,7 +247,31 @@ Collision Detection
 
     **Example**::
 
-        if (my_circle.collidePointCircle(mouse_pos.x, mouse_pos.y)) {
+        if (my_circle.collideCirclePoint(mouse_pos.x, mouse_pos.y)) {
+            handleCollision();
+        }
+
+.. function:: rect.collidePointCircle(x, y)
+
+    .. deprecated:: 2.4.0
+        Use the :func:`collideCirclePoint <rect.collideCirclePoint>` function instead
+
+    An alias to :func:`collideCirclePoint <rect.collideCirclePoint>` kept for compatibility reasons.
+
+.. function:: rect.collideCircleRect(otherRect)
+
+    This function performs a circle to square collision detection with another rect, treating this rect
+    as the circle, and the other rect as the square.
+
+    .. versionadded:: 2.4.0
+
+    :param otherRect: The other rect
+
+    :returns: **true** if there is a collision, else **false**
+
+    **Example**::
+
+        if (my_rect.collideCircleRect(other_rect)) {
             handleCollision();
         }
 
@@ -372,6 +424,8 @@ Visibility Functions
 
         friGame.sprites.background.toggle();
 
+.. _drawing_oder_functions:
+
 Drawing Order Functions
 -----------------------
 
@@ -452,8 +506,8 @@ Transform Functions
 
 .. note::
 
-    All the transforms are done with origin to the center of the sprite, so that the :attr:`centerx <rect.centerx>` and :attr:`centery <rect.centery>`
-    will refer to the center position of the sprite even after the transform.
+    All the transforms have a default origin to the center of the sprite, so that the :attr:`centerx <rect.centerx>`
+    and :attr:`centery <rect.centery>` will refer to the center position of the sprite even after the transform.
 
 .. warning::
 
@@ -548,6 +602,55 @@ Transform Functions
     **Example**::
 
         friGame.sprites.player.flipv(true);
+
+.. function:: sprite.transformOrigin([originx[, originy]])
+
+    If called without arguments this function returns the current transform origin x value of the sprite.
+
+    If called with only one argument this function sets both the sprite transform origin x and y to the same value.
+
+    .. versionadded:: 2.4.0
+
+    :param originx: The transform origin x (either a numeric value, or the strings 'halfWidth' or 'width')
+    :param originy: The transform origin y (either a numeric value, or the strings 'halfHeight' or 'height')
+
+    :returns: The transform origin x of the sprite if called without arguments, else the sprite object
+
+    **Example**::
+
+        friGame.sprites.player.transformOrigin(0, 'halfHeight');
+
+.. function:: sprite.transformOriginx([originx])
+
+    If called without arguments this function returns the current transform origin x value of the sprite.
+
+    If called with the originx parameter this function sets the sprite transform origin x.
+
+    .. versionadded:: 2.4.0
+
+    :param originx: The transform origin x (either a numeric value, or the strings 'halfWidth' or 'width')
+
+    :returns: The transform origin x of the sprite if called without arguments, else the sprite object
+
+    **Example**::
+
+        friGame.sprites.player.transformOriginx(0);
+
+.. function:: sprite.transformOriginy([originy])
+
+    If called without arguments this function returns the current transform origin y value of the sprite.
+
+    If called with the originy parameter this function sets the sprite transform origin y.
+
+    .. versionadded:: 2.4.0
+
+    :param originy: The transform origin y (either a numeric value, or the strings 'halfHeight' or 'height')
+
+    :returns: The transform origin y of the sprite if called without arguments, else the sprite object
+
+    **Example**::
+
+        friGame.sprites.player.transformOriginy('halfHeight');
 
 .. function:: sprite.opacity(alpha)
 
