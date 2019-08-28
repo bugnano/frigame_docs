@@ -12,16 +12,16 @@
 .. _Flash: http://www.adobe.com/go/getflashplayer
 .. _`The Gimp`: http://www.gimp.org/
 .. _UglifyJS: https://github.com/mishoo/UglifyJS2
-.. _BitBucket: https://bitbucket.org/bugnano/frigame
-.. _`issue tracker`: https://bitbucket.org/bugnano/frigame/issues
+.. _GitHub: https://github.com/bugnano/frigame
+.. _`issue tracker`: https://github.com/bugnano/frigame/issues
 .. _StackExchange: http://gamedev.stackexchange.com/questions/ask
 .. _CoffeeScript: http://coffeescript.org/
 .. _`Robert Penner's Easing Functions`: http://www.robertpenner.com/easing/
-.. _Mixer: https://bitbucket.org/bugnano/frigame_mixer
-.. _Tile: https://bitbucket.org/bugnano/frigame_tile
-.. _Isometric: https://bitbucket.org/bugnano/frigame_isometric
-.. _Text: https://bitbucket.org/bugnano/frigame_text
-.. _Sorted: https://bitbucket.org/bugnano/frigame_sorted
+.. _Mixer: https://github.com/bugnano/frigame_mixer
+.. _Tile: https://github.com/bugnano/frigame_tile
+.. _Isometric: https://github.com/bugnano/frigame_isometric
+.. _Text: https://github.com/bugnano/frigame_text
+.. _Sorted: https://github.com/bugnano/frigame_sorted
 
 .. |falsy| replace:: falsy (null, undefined, false, 0, or empty string)
 .. |playground| replace:: :func:`playground <friGame.playground>`

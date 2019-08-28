@@ -9,8 +9,6 @@ Contents:
 .. toctree::
     :maxdepth: 2
 
-    .. spritesheets
-
     deploying
     pitfalls
 

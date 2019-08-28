@@ -31,7 +31,7 @@ Development version
 The development version is not recommended for production use, as it may introduce experimental features that may rapidly change.
 It is intended for developers who want to contribute to friGame.
 
-Get the latest friGame development snapshot from BitBucket_.
+Get the latest friGame development snapshot from GitHub_.
 
 Experimental plugins
 --------------------

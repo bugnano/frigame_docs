@@ -10,7 +10,6 @@ Contents:
     :maxdepth: 2
 
     intro
-    .. tutorial/index
     api_reference/index
     topics/index
 
@@ -19,6 +18,5 @@ Indices and tables
 ==================
 
 - :ref:`genindex`
-.. - :ref:`modindex`
 - :ref:`search`
 

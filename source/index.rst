@@ -12,12 +12,12 @@ it has developed since then its own set of unique features.
 
 gameQuery_ Copyright (c) 2008-2013 Selim Arsever, licensed under the MIT
 
-friGame Copyright (c) 2011-2018 Franco Bugnano, licensed under the MIT
+friGame Copyright (c) 2011-2019 Franco Bugnano, licensed under the MIT
 
 Contribution / Contact information
 ----------------------------------
 
-friGame development is hosted on BitBucket_. If you find a bug, please use the `issue tracker`_.
+friGame development is hosted on GitHub_. If you find a bug, please use the `issue tracker`_.
 
 If you have any questions regarding the usage of friGame, feel free to ask a question on StackExchange_ using the tag ``frigame``.
 
