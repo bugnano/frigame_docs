@@ -12,7 +12,7 @@ it has developed since then its own set of unique features.
 
 gameQuery_ Copyright (c) 2008-2013 Selim Arsever, licensed under the MIT
 
-friGame Copyright (c) 2011-2019 Franco Bugnano, licensed under the MIT
+friGame Copyright (c) 2011-2021 Franco Bugnano, licensed under the MIT
 
 Contribution / Contact information
 ----------------------------------
@@ -25,9 +25,17 @@ If you want to submit a game, or for any other kind of question, suggestion, or 
 
 .. raw:: html
 
-    <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-lang="en" data-size="large" data-related="friGame" data-text="Checking out this JavaScript game development library">Tweet</a>
-    <a href="https://twitter.com/friGame" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @friGame</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <link href="_static/shariff/shariff.complete.css" rel="stylesheet">
+    <script src="_static/shariff/shariff.min.js"></script>
+    <div class="social-container">
+        <div class="shariff" data-lang="en" data-services="[&quot;twitter&quot;]" data-title="Checking out this JavaScript game development library" data-twitter-via="friGame"></div>
+        <div class="twitter-follow">
+            <a href="https://twitter.com/intent/follow?screen_name=friGame" data-rel="popup" rel="nofollow" title="Follow on Twitter" role="button" aria-label="Follow on Twitter">
+                <span class="fab fa-twitter"></span>
+                <span class="share_text">follow @friGame</span>
+            </a>
+        </div>
+    </div>
 
 
 
